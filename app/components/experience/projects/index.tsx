@@ -56,17 +56,18 @@ const Projects = () => {
 
       {/* Instruction card — visible when inside portal */}
       {isActive && (
-        <group position={[isMobile ? 0 : -1, isMobile ? -1 : 5, isMobile ? 3.5 : -2]}>
+        <group position={[isMobile ? 0 : -1, isMobile ? 4 : 5, isMobile ? 8 : -2]}>
           {/* Background pill */}
           <mesh>
-            <planeGeometry args={[isMobile ? 5 : 7, isMobile ? 0.9 : 0.8, 1]} />
-            <meshBasicMaterial color="#000" transparent opacity={0.45} />
+            <planeGeometry args={[isMobile ? 5.5 : 7, isMobile ? 1.1 : 0.8, 1]} />
+            <meshBasicMaterial color="#1a0800" transparent opacity={0.82} />
           </mesh>
-          <Text {...fontProps} fontSize={isMobile ? 0.28 : 0.22} position={[0, 0.18, 0.01]}>
+          <Text {...fontProps} fontSize={isMobile ? 0.32 : 0.22} position={[0, 0.22, 0.01]}
+            color="#F5EDD8">
             {INSTRUCTION_LINE1}
           </Text>
-          <Text {...fontProps} fontSize={isMobile ? 0.22 : 0.17} position={[0, -0.18, 0.01]}
-            color="rgba(255,255,255,0.65)">
+          <Text {...fontProps} fontSize={isMobile ? 0.24 : 0.17} position={[0, -0.22, 0.01]}
+            color="rgba(245,220,180,0.75)">
             {INSTRUCTION_LINE2}
           </Text>
         </group>
