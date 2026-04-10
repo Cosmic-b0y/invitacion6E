@@ -56,7 +56,7 @@ const Projects = () => {
 
       {/* Instruction card — visible when inside portal */}
       {isActive && (
-        <group position={[isMobile ? 0 : -1, isMobile ? 4 : 5, isMobile ? 0 : -2]}>
+        <group position={[isMobile ? 0 : -1, isMobile ? -3 : 5, isMobile ? 0 : -2]}>
           {/* Background pill */}
           <mesh>
             <planeGeometry args={[isMobile ? 5 : 7, isMobile ? 0.9 : 0.8, 1]} />
