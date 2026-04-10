@@ -10,10 +10,14 @@ import CloudContainer from "../models/Cloud";
 import StarsContainer from "../models/Stars";
 import WindowModel from "../models/WindowModel";
 import TextWindow from "./TextWindow";
+import { useGuestStore } from "@stores";
 
 const Hero = () => {
   const titleRef = useRef<THREE.Mesh>(null);
   const { progress } = useProgress();
+  const guestName = useGuestStore((s) => s.guestName);
+
+  const greeting = guestName ? `Hola, ${guestName}.` : 'Invitado especial.';
 
   useEffect(() => {
     if (progress === 100 && titleRef.current) {
@@ -35,13 +39,13 @@ const Hero = () => {
 
   return (
     <>
-      <Text position={[0, 2, -10]} {...fontProps} ref={titleRef}>Hi, I am Mohit Virli.</Text>
+      <Text position={[0, 2, -10]} {...fontProps} ref={titleRef}>{greeting}</Text>
       <StarsContainer />
-      <CloudContainer/>
+      <CloudContainer />
       <group position={[0, -25, 5.69]}>
-        <pointLight castShadow position={[1, 1, -2.5]} intensity={60} distance={10}/>
-        <WindowModel receiveShadow/>
-        <TextWindow/>
+        <pointLight castShadow position={[1, 1, -2.5]} intensity={60} distance={10} />
+        <WindowModel receiveShadow />
+        <TextWindow />
       </group>
     </>
   );

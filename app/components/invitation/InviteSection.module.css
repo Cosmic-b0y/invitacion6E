@@ -1,0 +1,81 @@
+.invite {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #060d06 0%, #0e1a0e 50%, #101e10 100%);
+  padding: 6rem 2rem;
+}
+
+.inner {
+  max-width: 700px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.eyebrow {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: #c9a96e;
+}
+
+.heading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-weight: 300;
+  color: #f5edd8;
+  margin: 0;
+  line-height: 1.1;
+  font-style: italic;
+}
+
+.divider {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c9a96e, transparent);
+  margin: 0.5rem auto;
+}
+
+.body {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-weight: 300;
+  line-height: 1.9;
+  color: rgba(245, 237, 216, 0.8);
+  margin: 0;
+}
+
+.body em {
+  font-style: italic;
+  color: #c9a96e;
+}
+
+.tagRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.tag {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(201, 169, 110, 0.7);
+  border: 1px solid rgba(201, 169, 110, 0.25);
+  padding: 0.4rem 1rem;
+  border-radius: 0;
+}
+
+.tagDot {
+  color: rgba(201, 169, 110, 0.4);
+  font-size: 1.2rem;
+}

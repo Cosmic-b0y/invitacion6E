@@ -1,59 +1,63 @@
 import { Project } from "../types";
 
-// TODO: Move this to API
 export const PROJECTS: Project[] = [
+  // ── BEBIDAS FRÍAS ────────────────────────────────
   {
-    title: 'Angular Gulp Seed',
-    date: 'Aug 2016',
-    subtext: 'A basic starter project to initialize project using AngularJS and Gulp. It follows MVC architecture and uses standard app structure.',
-    url: 'https://github.com/mohitvirli/angular-gulp-seed',
+    title: 'Café Horchata',
+    date: 'Bebidas Frías',
+    subtext: 'Café de especialidad mezclado con horchata artesanal de arroz y canela. Dulce, cremoso y refrescante — una combinación que no olvidarás.',
+    category: 'bebida',
   },
   {
-    title: 'State.js',
-    date: 'Jul 2020',
-    subtext: 'A lightweight library for turning JS objects into observables, providing a convenient API for state management and manipulation.',
-    url: 'https://github.com/mohitvirli/state.js',
+    title: 'Frappé Taro',
+    date: 'Bebidas Frías',
+    subtext: 'Frappé helado a base de taro morado, leche y café. Suave, exótico y visualmente espectacular. Una experiencia para los sentidos.',
+    category: 'bebida',
   },
   {
-    title: 'change-host',
-    date: 'Jul 2020',
-    subtext: 'A CLI tool to manage /etc/hosts entries for local development. It enables quick and easy mapping of IPs to URLs with a single command.',
-    url: 'https://github.com/mohitvirli/change-host',
+    title: 'Tisana Frutos del Bosque',
+    date: 'Bebidas Frías',
+    subtext: 'Infusión fría de frambuesa, mora y arándano con un toque de hibisco. Frutal, antioxidante y llena de color. Perfecta para el calor.',
+    category: 'bebida',
+  },
+
+  // ── SNACKS / COMIDA ──────────────────────────────
+  {
+    title: 'Croissant Jamón y Queso',
+    date: 'Snacks',
+    subtext: 'Croissant artesanal de mantequilla relleno de jamón serrano y queso fundido. Crujiente por fuera, cremoso por dentro. Irresistible.',
+    category: 'snack',
   },
   {
-    title: 'Vaccine Slots Discord Bot',
-    date: 'May 2021',
-    subtext: 'A Discord Bot that sends alerts for COVID-19 vaccine availability based on PIN/district using public APIs.',
-    url: 'https://github.com/mohitvirli/vaccine-slots-discord-bot',
+    title: 'Focaccia Capresse',
+    date: 'Snacks',
+    subtext: 'Focaccia de romero con tomates cherry asados, mozzarella fresca y albahaca. Regada con aceite de oliva extra virgen. Italiana y deliciosa.',
+    category: 'snack',
   },
   {
-    title: 'Chat bot',
-    date: 'Aug 2024',
-    subtext: 'A streaming chatbot that allows users to switch between different LLMs with custom API keys.',
-    url: 'https://github.com/mohitvirli/chat-bot-vercel',
+    title: 'Grill Cheese',
+    date: 'Snacks',
+    subtext: 'Sándwich de pan brioche tostado en mantequilla con mezcla de tres quesos fundidos. Dorado, crujiente y reconfortante. El clásico elevado.',
+    category: 'snack',
+  },
+
+  // ── POSTRES ──────────────────────────────────────
+  {
+    title: 'Cheesecake NY',
+    date: 'Postres',
+    subtext: 'Cheesecake estilo Nueva York con base de galleta, crema densa de queso y coulis de frutos rojos. Denso, suave y absolutamente adictivo.',
+    category: 'postre',
   },
   {
-    title: 'Word Game',
-    date: 'Oct 2024',
-    subtext: 'This word game app offers single and multiplayer modes where players take turns forming words, each starting with the last letter of the previous word.',
-    url: 'https://github.com/mohitvirli/word-game',
+    title: 'Brownies',
+    date: 'Postres',
+    subtext: 'Brownie de chocolate oscuro con centro húmedo y fudgy, nuez tostada y cobertura de ganache. Intensamente chocolatoso y profundamente satisfactorio.',
+    category: 'postre',
   },
   {
-    title: 'DJ Gig',
-    date: 'Mar 2025',
-    subtext: 'Hosted a Sundowner event which was recorded and is out on YouTube. Furthermore, I performed a UKG/140 DJ set at a local club.',
-    url: 'https://www.youtube.com/watch?v=oauQSEySkoQ',
-  },
-  {
-    title: 'Portfolio',
-    date: 'Apr 2025',
-    subtext: '[Enter a meta joke].',
-    url: 'https://github.com/mohitvirli/mohitvirli.github.io',
-  },
-  {
-    title: 'Focus Clock',
-    date: 'Jun 2025',
-    subtext: 'Developed a minimalist clock featuring a time-remaining indicator.',
-    url: 'https://github.com/mohitvirli/focus-clock',
+    title: 'Galletas NY',
+    date: 'Postres',
+    subtext: 'Galletas estilo Nueva York: grandes, gruesas, con bordes crujientes y centro suave. Chips de chocolate en cada mordida. Cálidas y recién horneadas.',
+    category: 'postre',
   },
 ];

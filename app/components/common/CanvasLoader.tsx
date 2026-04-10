@@ -9,10 +9,11 @@ import { isMobile } from "react-device-detect";
 
 import { useThemeStore } from "@stores";
 
-import AwwardsBadge from "./AwwardsBadge";
+import NameModal from "./NameModal";
 import Preloader from "./Preloader";
 import ProgressLoader from "./ProgressLoader";
 import { ScrollHint } from "./ScrollHint";
+import SiteHeader from "./SiteHeader";
 import ThemeSwitcher from "./ThemeSwitcher";
 // import {Perf} from "r3f-perf"
 
@@ -90,7 +91,8 @@ const CanvasLoader = (props: { children: React.ReactNode }) => {
         </Canvas>
         <ProgressLoader progress={progress} />
       </div>
-      <AwwardsBadge />
+      <NameModal />
+      <SiteHeader />
       <ThemeSwitcher />
       <ScrollHint />
     </div>

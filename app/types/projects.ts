@@ -9,4 +9,5 @@ export interface Project {
   subtext: string;
   url?: string;
   urls?: ProjectUrl[];
+  category?: 'bebida' | 'snack' | 'postre';
 }

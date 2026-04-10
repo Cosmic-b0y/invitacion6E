@@ -1,0 +1,177 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: radial-gradient(ellipse 80% 70% at 50% 40%, #1b3a1b 0%, #0a1409 60%, #060d06 100%);
+}
+
+.orbTop {
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(201, 169, 110, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.orbBottom {
+  position: absolute;
+  bottom: -10%;
+  left: 30%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(30, 80, 30, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: #c9a96e;
+  animation: floatParticle linear infinite;
+  bottom: -10px;
+}
+
+@keyframes floatParticle {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 0.5; }
+  100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.logoWrap {
+  margin-bottom: 2.5rem;
+  opacity: 0;
+}
+
+.logo {
+  width: clamp(200px, 35vw, 360px);
+  height: auto;
+  transition: transform 0.6s ease;
+}
+
+.logo:hover {
+  transform: scale(1.03);
+}
+
+.title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(4rem, 12vw, 10rem);
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  color: #f5edd8;
+  margin: 0;
+  display: flex;
+  gap: 0.5em;
+  perspective: 600px;
+  line-height: 1;
+}
+
+.word {
+  display: inline-flex;
+}
+
+.wordBreak {
+  width: 0.3em;
+}
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform-origin: top center;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0 1.5rem;
+  transform-origin: center;
+}
+
+.lineDivider {
+  display: block;
+  width: clamp(80px, 15vw, 200px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c9a96e, transparent);
+}
+
+.lineDot {
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #c9a96e;
+}
+
+.subtitle {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(0.9rem, 2.5vw, 1.4rem);
+  font-weight: 300;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: #c9a96e;
+  opacity: 0;
+  margin: 0;
+}
+
+.scrollHint {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0;
+}
+
+.scrollText {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #c9a96e;
+}
+
+.scrollLine {
+  width: 1px;
+  height: 50px;
+  background: linear-gradient(to bottom, #c9a96e, transparent);
+  animation: scrollPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.2); }
+}
+
+@media (max-width: 768px) {
+  .title {
+    flex-direction: column;
+    gap: 0;
+  }
+}

@@ -14,42 +14,26 @@ const vercettiFont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Mohit Virli ✌️",
-  description: "A frontend developer by profession, a creative at heart.",
-  keywords: "Mohit Virli, Frontend Engineer, React Developer, Three.js, Creative Developer, Web Development, Angular, JavaScript, TypeScript, Portfolio",
-  authors: [{ name: "Mohit Virli" }],
-  creator: "Mohit Virli",
-  publisher: "Mohit Virli",
+  title: "Hola, eres un invitado especial ",
+  description: "Estás invitado a una experiencia única en el Jardín Cocinarte.",
+  keywords: "Senda Coffee, invitación, Jardín Cocinarte, café de especialidad",
+  authors: [{ name: "Senda Coffee" }],
+  creator: "Senda Coffee",
+  publisher: "Senda Coffee",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
+    index: false,
+    follow: false,
   },
   openGraph: {
-    title: "Mohit Virli - Frontend Engineer",
-    description: "Frontend engineer by profession, creative at heart.",
-    url: "https://mohitvirli.github.io",
-    siteName: "Mohit Virli's Portfolio",
-    locale: "en_US",
+    title: "Senda Coffee — Una Invitación Especial",
+    description: "Estás invitado a una experiencia única en el Jardín Cocinarte.",
+    locale: "es_GT",
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Mohit Virli - Frontend Engineer",
-    description: "Frontend engineer by profession, creative at heart.",
-  },
-  verification: {
-    google: "GsRYY-ivL0F_VKkfs5KAeToliqz0gCrRAJKKmFkAxBA",
   },
 };
 
@@ -66,13 +50,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="overscroll-y-none">
+    <html lang="es" className="overscroll-y-none">
       <body
         className={`${soriaFont.variable} ${vercettiFont.variable} font-sans antialiased`}
       >
         {children}
       </body>
-      <GoogleAnalytics gaId={'G-7WD4HM3XRE'}/>
+      <GoogleAnalytics gaId={'G-7WD4HM3XRE'} />
     </html>
   );
 }

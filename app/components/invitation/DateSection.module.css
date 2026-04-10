@@ -1,0 +1,114 @@
+.dateSection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #0a1409 0%, #0d1a0c 50%, #0a1409 100%);
+  padding: 6rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.dateSection::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(201, 169, 110, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.label {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: #c9a96e;
+  font-style: italic;
+}
+
+.dateBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dayName {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(245, 237, 216, 0.6);
+}
+
+.dayNumber {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(3rem, 14vw, 10rem);
+  font-weight: 300;
+  color: #f5edd8;
+  line-height: 1;
+  font-style: italic;
+}
+
+.month {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(245, 237, 216, 0.6);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+  transform-origin: center;
+}
+
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201, 169, 110, 0.5), transparent);
+}
+
+.dividerIcon {
+  color: #c9a96e;
+  font-size: 0.8rem;
+}
+
+.timeBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.timeLabel {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: rgba(201, 169, 110, 0.6);
+}
+
+.time {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2rem, 8vw, 5rem);
+  font-weight: 300;
+  color: #c9a96e;
+  letter-spacing: 0.1em;
+}

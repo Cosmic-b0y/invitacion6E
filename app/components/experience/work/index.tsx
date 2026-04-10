@@ -26,9 +26,11 @@ const Work = () => {
       const scrollWrapper = document.querySelector('div[style*="z-index: -1"]') as HTMLElement;
       const originalScrollWrapper = document.querySelector('div[style*="z-index: 1"]') as HTMLElement;
       setScrollProgress(0);
-      scrollWrapper.addEventListener('scroll', handleScroll)
-      scrollWrapper.style.zIndex = '1';
-      originalScrollWrapper.style.zIndex = '-1';
+      if (scrollWrapper) {
+        scrollWrapper.addEventListener('scroll', handleScroll);
+        scrollWrapper.style.zIndex = '1';
+        if (originalScrollWrapper) originalScrollWrapper.style.zIndex = '-1';
+      }
     } else {
       const scrollWrapper = document.querySelector('div[style*="z-index: 1"]') as HTMLElement;
       const originalScrollWrapper = document.querySelector('div[style*="z-index: -1"]') as HTMLElement;
@@ -38,7 +40,7 @@ const Work = () => {
         setScrollProgress(0);
         scrollWrapper.removeEventListener('scroll', handleScroll);
         scrollWrapper.style.zIndex = '-1';
-        originalScrollWrapper.style.zIndex = '1';
+        if (originalScrollWrapper) originalScrollWrapper.style.zIndex = '1';
       }
     }
   }, [isActive]);

@@ -1,34 +1,14 @@
 import { FooterLink } from "../types";
 
+// TODO: Cambia el número de WhatsApp antes de publicar
+const WHATSAPP_NUMBER = '9612753555';
+const WHATSAPP_MSG = encodeURIComponent('Hola! Confirmo mi asistencia al evento de Senda Coffee en el Jardín Cocinarte ');
+
 export const FOOTER_LINKS: FooterLink[] = [
   {
-    name: 'LinkedIn',
-    hoverText: 'Connect with me',
-    icon: 'icons/linkedin.svg',
-    url: 'https://www.linkedin.com/in/mohit-virli-4780b6112/',
-  },
-  {
-    name: 'GitHub',
-    hoverText: 'Open Sourcing',
+    name: 'Confirmar Asistencia',
+    hoverText: 'WhatsApp',
     icon: 'icons/github.svg',
-    url: 'https://github.com/mohitvirli',
+    url: `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`,
   },
-  {
-    name: 'Spotify',
-    hoverText: 'Curated playlists',
-    icon: 'icons/spotify.svg',
-    url: 'https://open.spotify.com/user/21hr4w2hzp4ceidewwsb4bxoy',
-  },
-  {
-    name: 'Instagram',
-    hoverText: '@clevirli',
-    icon: 'icons/instagram.svg',
-    url: 'https://www.instagram.com/clevirli/',
-  },
-  {
-    name: 'Resume',
-    hoverText: 'Download',
-    icon: 'icons/file.svg',
-    url: './Mohit Virli - Resume.pdf',
-  }
 ];
